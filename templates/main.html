@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Alert Buttons</h1>
+{% for i in pin %}
+{% if pin[i].state=="on" %}
+<a href="/{{i}}/off"  class="btn success"> {{pin[i].name}} </a>
+{% elif pin[i].state == "off" %}
+<a href="/{{i}}/on"  class="btn info"> {{pin[i].name}} </a>
+{% endif %}
+{% endfor %}
+
+
+</body>
+</html>
